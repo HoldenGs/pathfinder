@@ -14,7 +14,7 @@ def pathfinder():
     search_items = request.form['search'].split(",")
     start_item = search_items[0]
     end_item = search_items[1]
-    return (start_item, end_item)
+    return render_template('index.html', search_items=search_items)
 
 @app.route('/')
 def index():
